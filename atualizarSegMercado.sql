@@ -1,0 +1,11 @@
+DECLARE
+        V_SEGMERCADO_ID CLIENTE.SEGMERCADO_ID%TYPE := 1;
+        V_I NUMBER(3);
+BEGIN
+    V_I :=  1;
+LOOP
+        ATUALIZAR_CLI_SEG_MERCADO(V_I,V_SEGMERCADO_ID);
+        V_I := V_I + 1;
+        EXIT WHEN V_I > 3; 
+    END LOOP;
+END;
